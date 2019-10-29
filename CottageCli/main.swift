@@ -8,5 +8,12 @@
 
 import Foundation
 
-print("Hello, World!")
+do {
+    let service = try CliParser.ParseCommand(userGivenArguments: CommandLine.arguments)
+    service.printCommand()
+}
+catch {
+    print("Exception happened :D")
+}
+
 

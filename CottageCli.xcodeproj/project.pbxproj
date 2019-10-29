@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		81726BB92368BC6100CC21F0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BB82368BC6100CC21F0 /* main.swift */; };
+		81726BC12368BF6B00CC21F0 /* CliParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC02368BF6B00CC21F0 /* CliParser.swift */; };
+		81726BC72368C38700CC21F0 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC62368C38700CC21F0 /* BaseService.swift */; };
+		81726BC92368C7ED00CC21F0 /* CottageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC82368C7ED00CC21F0 /* CottageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		81726BB52368BC6100CC21F0 /* CottageCli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CottageCli; sourceTree = BUILT_PRODUCTS_DIR; };
 		81726BB82368BC6100CC21F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		81726BC02368BF6B00CC21F0 /* CliParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CliParser.swift; sourceTree = "<group>"; };
+		81726BC62368C38700CC21F0 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		81726BC82368C7ED00CC21F0 /* CottageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CottageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,28 @@
 		81726BB72368BC6100CC21F0 /* CottageCli */ = {
 			isa = PBXGroup;
 			children = (
+				81726BC52368C34900CC21F0 /* Services */,
+				81726BBF2368BF5700CC21F0 /* Utilities */,
 				81726BB82368BC6100CC21F0 /* main.swift */,
 			);
 			path = CottageCli;
+			sourceTree = "<group>";
+		};
+		81726BBF2368BF5700CC21F0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				81726BC02368BF6B00CC21F0 /* CliParser.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		81726BC52368C34900CC21F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				81726BC62368C38700CC21F0 /* BaseService.swift */,
+				81726BC82368C7ED00CC21F0 /* CottageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81726BB92368BC6100CC21F0 /* main.swift in Sources */,
+				81726BC12368BF6B00CC21F0 /* CliParser.swift in Sources */,
+				81726BC72368C38700CC21F0 /* BaseService.swift in Sources */,
+				81726BC92368C7ED00CC21F0 /* CottageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
