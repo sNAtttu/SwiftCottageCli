@@ -10,7 +10,9 @@ import Foundation
 
 do {
     let service = try CliParser.ParseCommand(userGivenArguments: CommandLine.arguments)
-    service.executeAction()
+    let userDataFromDisk = try FileService.loadUserData()
+    let userInfo = try UserInformation(userInfoFromDisk: userDataFromDisk)
+    service.executeAction(userData: userInfo)
 }
 catch {
     print("Exception happened :D")

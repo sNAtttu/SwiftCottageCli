@@ -18,7 +18,7 @@ class BaseService {
         self.action = action
     }
     
-    func executeAction() {
+    func executeAction(userData: UserInformation) {
         print(self.command)
     }
     

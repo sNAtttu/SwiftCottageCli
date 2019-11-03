@@ -19,13 +19,14 @@ class CottageService: BaseService {
         super.init(command, action)
     }
     
-    override func executeAction() {
+    override func executeAction(userData: UserInformation) {
         
         switch self.cottageAction {
         case "add":
             do {
-                let existingData = try FileService.loadUserData()
-                print(NSString(data: existingData, encoding: 1) ?? "NOK")
+                let newCottage = CottageModel(Name: self.optionalArgs[0])
+                userData.addCottageForUser(newCottage: newCottage)
+                try userData.saveUserData()
             }
             catch {
                 print(error)

@@ -25,4 +25,14 @@ class FileService {
         }
     }
 
+    static func saveUserData(userData: Data) throws {
+        do {
+            let fileHandle = FileHandle(forWritingAtPath: "\(cottageDbPath + userInformationFileName)")!
+            fileHandle.write(userData)
+            try fileHandle.close()
+        } catch {
+            throw error
+        }
+    }
+    
 }

@@ -8,12 +8,46 @@
 
 import Foundation
 
+struct UserModel: Codable {
+    var cottages: [CottageModel]
+}
+
 class UserInformation {
     
-    let cottages: [Cottage]
+    var userInfo: UserModel
     
-    init(userInfoFromDisk: [String : Any]) {
-        self.cottages = userInfoFromDisk["cottages"] as! [Cottage]
+    init(userInfoFromDisk: Data) throws {
+        do {
+            let decoder = JSONDecoder()
+            self.userInfo = try decoder.decode(UserModel.self, from: userInfoFromDisk)
+        } catch {
+            throw error
+        }
+
+    }
+    
+    func addCottageForUser(newCottage: CottageModel) {
+        userInfo.cottages.append(newCottage)
+    }
+    
+    func convertToJson() throws -> Data {
+        
+        do {
+            let encoder = JSONEncoder()
+            let dataAsJson = try encoder.encode(userInfo)
+            return dataAsJson
+            
+        } catch {
+            throw "Serialization failed!"
+        }
+    }
+    
+    func saveUserData() throws {
+        do {
+            try FileService.saveUserData(userData: self.convertToJson())
+        } catch {
+            throw error
+        }
     }
     
 }
