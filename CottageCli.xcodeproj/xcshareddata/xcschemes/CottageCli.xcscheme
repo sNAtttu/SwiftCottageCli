@@ -60,11 +60,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Kielosaari"
-            isEnabled = "YES">
-         </CommandLineArgument>
-         <CommandLineArgument
-            argument = "Savonlinna"
+            argument = "Sj&#xe4;l&#xf6;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

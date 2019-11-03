@@ -11,11 +11,18 @@ import Foundation
 class FileService {
     
     static let cottageDbPath: String = "/Users/snou/cottageDb/"
-    static let cottageFileName: String = "cottages.json"
+    static let userInformationFileName: String = "user.json"
     
-    static func writeFileToDisk(jsonToWrite: Data) {
-        let fileHandle: FileHandle = FileHandle(forWritingAtPath: "\(cottageDbPath + cottageFileName)")!
-        fileHandle.write(jsonToWrite)
+    static func loadUserData() throws -> Data {
+        do {
+            let fileHandle: FileHandle = FileHandle(forReadingAtPath: "\(cottageDbPath + userInformationFileName)")!
+            let existingData = fileHandle.readDataToEndOfFile()
+            try fileHandle.close()
+            return existingData
+        }
+        catch {
+            throw error
+        }
     }
-    
+
 }

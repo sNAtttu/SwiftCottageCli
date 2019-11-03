@@ -23,9 +23,9 @@ class CottageService: BaseService {
         
         switch self.cottageAction {
         case "add":
-            let newCottage = Cottage(name: self.optionalArgs[0])
             do {
-                try FileService.writeFileToDisk(jsonToWrite: newCottage.convertToJson())
+                let existingData = try FileService.loadUserData()
+                print(NSString(data: existingData, encoding: 1) ?? "NOK")
             }
             catch {
                 print(error)
