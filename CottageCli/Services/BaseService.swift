@@ -18,7 +18,7 @@ class BaseService {
         self.action = action
     }
     
-    func printCommand() {
+    func executeAction() {
         print(self.command)
     }
     

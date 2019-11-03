@@ -11,20 +11,23 @@ import Foundation
 class CottageService: BaseService {
     
     let optionalArgs: [String]
+    let cottageAction: String
     
     init(_ command: String, _ action: String, _ optionalArgs: [String]) {
         self.optionalArgs = optionalArgs
+        self.cottageAction = action
         super.init(command, action)
     }
     
-    override func printCommand() {
-        print(self.command)
-        print(self.action)
+    override func executeAction() {
         
-        optionalArgs.forEach { arg in
-            print(arg)
+        switch self.cottageAction {
+        case "add":
+            let newCottage = Cottage(name: self.optionalArgs[0])
+            print(newCottage.convertToJson() ?? "Cottage JSON Failed")
+        default:
+            print("Unknown action")
         }
         
     }
-    
 }

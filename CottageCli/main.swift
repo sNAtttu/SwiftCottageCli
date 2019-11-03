@@ -10,7 +10,7 @@ import Foundation
 
 do {
     let service = try CliParser.ParseCommand(userGivenArguments: CommandLine.arguments)
-    service.printCommand()
+    service.executeAction()
 }
 catch {
     print("Exception happened :D")

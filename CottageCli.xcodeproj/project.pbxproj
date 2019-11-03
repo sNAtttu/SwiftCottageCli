@@ -11,6 +11,8 @@
 		81726BC12368BF6B00CC21F0 /* CliParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC02368BF6B00CC21F0 /* CliParser.swift */; };
 		81726BC72368C38700CC21F0 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC62368C38700CC21F0 /* BaseService.swift */; };
 		81726BC92368C7ED00CC21F0 /* CottageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BC82368C7ED00CC21F0 /* CottageService.swift */; };
+		81726BCC236EDB9E00CC21F0 /* Cottage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BCB236EDB9E00CC21F0 /* Cottage.swift */; };
+		81726BCE236EE27B00CC21F0 /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81726BCD236EE27B00CC21F0 /* FileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,8 @@
 		81726BC02368BF6B00CC21F0 /* CliParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CliParser.swift; sourceTree = "<group>"; };
 		81726BC62368C38700CC21F0 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		81726BC82368C7ED00CC21F0 /* CottageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CottageService.swift; sourceTree = "<group>"; };
+		81726BCB236EDB9E00CC21F0 /* Cottage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cottage.swift; sourceTree = "<group>"; };
+		81726BCD236EE27B00CC21F0 /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		81726BB72368BC6100CC21F0 /* CottageCli */ = {
 			isa = PBXGroup;
 			children = (
+				81726BCA236EDB7A00CC21F0 /* Models */,
 				81726BC52368C34900CC21F0 /* Services */,
 				81726BBF2368BF5700CC21F0 /* Utilities */,
 				81726BB82368BC6100CC21F0 /* main.swift */,
@@ -83,8 +88,17 @@
 			children = (
 				81726BC62368C38700CC21F0 /* BaseService.swift */,
 				81726BC82368C7ED00CC21F0 /* CottageService.swift */,
+				81726BCD236EE27B00CC21F0 /* FileService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		81726BCA236EDB7A00CC21F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81726BCB236EDB9E00CC21F0 /* Cottage.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,8 @@
 				81726BC12368BF6B00CC21F0 /* CliParser.swift in Sources */,
 				81726BC72368C38700CC21F0 /* BaseService.swift in Sources */,
 				81726BC92368C7ED00CC21F0 /* CottageService.swift in Sources */,
+				81726BCC236EDB9E00CC21F0 /* Cottage.swift in Sources */,
+				81726BCE236EE27B00CC21F0 /* FileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
