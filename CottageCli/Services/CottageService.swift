@@ -24,7 +24,12 @@ class CottageService: BaseService {
         switch self.cottageAction {
         case "add":
             let newCottage = Cottage(name: self.optionalArgs[0])
-            print(newCottage.convertToJson() ?? "Cottage JSON Failed")
+            do {
+                try FileService.writeFileToDisk(jsonToWrite: newCottage.convertToJson())
+            }
+            catch {
+                print(error)
+            }
         default:
             print("Unknown action")
         }

@@ -10,8 +10,12 @@ import Foundation
 
 class FileService {
     
-    static func writeFileToDisk() {
-        
+    static let cottageDbPath: String = "/Users/snou/cottageDb/"
+    static let cottageFileName: String = "cottages.json"
+    
+    static func writeFileToDisk(jsonToWrite: Data) {
+        let fileHandle: FileHandle = FileHandle(forWritingAtPath: "\(cottageDbPath + cottageFileName)")!
+        fileHandle.write(jsonToWrite)
     }
     
 }

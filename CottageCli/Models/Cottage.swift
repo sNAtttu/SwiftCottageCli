@@ -16,16 +16,15 @@ class Cottage {
         Name = name;
     }
     
-    func convertToJson() -> NSString? {
+    func convertToJson() throws -> Data {
         
         do {
             let classDictionary = ["Name": self.Name]
             let dataAsJson = try JSONSerialization.data(withJSONObject: classDictionary)
-            return NSString(data: dataAsJson, encoding: 1)
+            return dataAsJson
             
         } catch {
-            print(error)
+            throw "Serialization failed!"
         }
-        return "NOK"
     }
 }
